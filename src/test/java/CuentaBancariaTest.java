@@ -38,7 +38,7 @@ public class CuentaBancariaTest {
     }
     
     @Test 
-    public void miPruebaTres(){
+    public void miPruebaTresInteres(){
         cuenta.setTipoInteres(-1.0);
         assertEquals(1.5 , cuenta.getTipoInteres());
     

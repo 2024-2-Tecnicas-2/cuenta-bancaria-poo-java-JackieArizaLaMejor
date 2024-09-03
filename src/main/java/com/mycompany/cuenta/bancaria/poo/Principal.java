@@ -17,7 +17,7 @@ public class Principal{
         System.out.println("Saldo inicial: " + cuenta.getSaldo());
 
         // Ingresar una cantidad a la cuenta
-        System.out.println("ingresar la cantidad deseada");
+        System.out.println("ingresar la cantidad deseada ");
         double ingresar = sc.nextDouble();
         cuenta.ingresar(ingresar);
         System.out.println("Saldo despues de ingresar: " + ingresar + " Es " + cuenta.getSaldo());

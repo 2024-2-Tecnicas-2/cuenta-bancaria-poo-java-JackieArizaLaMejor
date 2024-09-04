@@ -2,15 +2,13 @@ package com.mycompany.cuenta.bancaria.poo;
 
 import java.util.Scanner;
 
-
-public class Principal{
+public class Principal {
 
     public static void main(String[] args) {
         // Crear una nueva instancia de CuentaBancaria
         CuentaBancaria cuenta = new CuentaBancaria("Yakelin", "1234", 1220, 1.5);
         Scanner sc = new Scanner(System.in);
-        
- 
+
         // Mostrar el titular, el número de cuenta y el saldo inicial
         System.out.println("Titular: " + cuenta.getTitular());
         System.out.println("Numero de cuenta: " + cuenta.getNumCuenta());
@@ -38,10 +36,14 @@ public class Principal{
         System.out.println("Saldo con interes aplicado: " + cuenta.calcularInteres());
 
         // Cambiar el tipo de interés
-        System.out.println("ingresar el tipo de interes");
+        System.out.println("Ingresar el tipo de interés:");
         double interes = sc.nextDouble();
-        cuenta.setTipoInteres(interes);
-        System.out.println("Nuevo saldo con interes: " + interes + " " + cuenta.calcularInteres());
-    }
+        if (interes >= 0 && interes <= 10) {
+            cuenta.setTipoInteres(interes);
+            System.out.println("Nuevo saldo con interés: " + interes + " Es " + cuenta.calcularInteres());
+        } else {
+            System.out.println("No se puede establecer un interés negativo ni superior al 10%");
+        }
 
+    }
 }

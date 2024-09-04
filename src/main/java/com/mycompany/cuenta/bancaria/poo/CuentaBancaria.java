@@ -59,9 +59,9 @@ public class CuentaBancaria {
     public void setTipoInteres(double tipoInteres) {
         if (tipoInteres >= 0 && tipoInteres <= 10) {
             this.tipoInteres = tipoInteres;
-
         }
-
+        else 
+            System.out.println("No se puede establecer un interés negativo ni superior al 10%");
     }
 
     public double getTipoInteres() {
